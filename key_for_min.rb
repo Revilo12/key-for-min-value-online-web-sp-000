@@ -4,5 +4,6 @@
 def key_for_min_value(name_hash) #hash of names and numeric values
   #want to use collect to go through and see which value is the lowest and then return the key for iterators
   values = name_hash.collect {|name, val| val}
-  name_hash.collect {|name, val| name if val == 
+  min_val = values.min
+  name_hash.collect {|name, val| name if val == min_val}
 end
